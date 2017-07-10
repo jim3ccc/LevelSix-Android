@@ -1,1 +1,1 @@
-include ':app', ':androidsixpermissions'
+include ':sample', ':androidsixpermissions'
