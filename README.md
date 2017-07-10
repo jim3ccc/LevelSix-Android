@@ -19,3 +19,20 @@ dependencies {
     compile 'com.github.meeej:LevelSix-Android:v1.0.0'
 }
 ```
+
+## Usage
+
+create a list of permissions you want
+```
+private String[] PERMISSIONS = {Manifest.permission.READ_CONTACTS,
+                                    Manifest.permission.WRITE_CONTACTS,
+                                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                    Manifest.permission.READ_SMS,
+                                    Manifest.permission.CAMERA};
+```
+
+then just call
+
+```
+LevelSixPermissions.checkPermissions(MainActivity.this, requestCode, PERMISSIONS);
+```
