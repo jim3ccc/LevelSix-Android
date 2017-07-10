@@ -19,6 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LevelSixPermissions.checkPermissions(this, this, 1, PERMISSIONS);
+        LevelSixPermissions.checkPermissions(this, 1, PERMISSIONS);
     }
 }

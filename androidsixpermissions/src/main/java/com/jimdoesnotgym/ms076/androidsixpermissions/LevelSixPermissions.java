@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
-public class LevelSixPermissions implements ActivityCompat.OnRequestPermissionsResultCallback{
+public class LevelSixPermissions{
 
     private static final String TAG = "LevelSixPermissions";
 
@@ -20,10 +20,5 @@ public class LevelSixPermissions implements ActivityCompat.OnRequestPermissionsR
                 }
             }
         }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        Log.d(TAG, "Jimbo");
     }
 }
