@@ -16,6 +16,6 @@ In app gradle file:
 ```
 dependencies {
     ...
-    compile 'com.github.meeej:LevelSix-Android:ev1.0.0
+    compile 'com.github.meeej:LevelSix-Android:v1.0.0'
 }
 ```
