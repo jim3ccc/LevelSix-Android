@@ -8,9 +8,10 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
-public class LevelSixPermissions{
+public class LevelSixPermissions implements ActivityCompat.OnRequestPermissionsResultCallback{
 
     private static final String TAG = "LevelSixPermissions";
+    RequestPermissionCallback callback;
 
     public static void checkPermissions(Activity activity, int requestCode, String ... permissions){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && activity != null && permissions !=null){
@@ -20,5 +21,22 @@ public class LevelSixPermissions{
                 }
             }
         }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(this.callback != null){
+            this.callback.onRequestPermissionsResult();
+        }else {
+            return;
+        }
+    }
+
+    public interface RequestPermissionCallback{
+        public void onRequestPermissionsResult();
+    }
+
+    public void setLevelSixPermissionsCallback(RequestPermissionCallback callback){
+        this.callback = callback;
     }
 }
