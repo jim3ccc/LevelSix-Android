@@ -12,10 +12,10 @@ public class LevelSixPermissions implements ActivityCompat.OnRequestPermissionsR
 
     private static final String TAG = "LevelSixPermissions";
 
-    public static void checkPermissions(Context context, Activity activity, int requestCode, String ... permissions){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions !=null){
+    public static void checkPermissions(Activity activity, int requestCode, String ... permissions){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && activity != null && permissions !=null){
             for(String permission: permissions){
-                if(ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(activity, permissions, requestCode);
                 }
             }
